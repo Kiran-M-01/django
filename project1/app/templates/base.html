@@ -41,7 +41,7 @@ button{
     background-color: black;
     color: white;
     padding: 7px 10px;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 button:hover{
     background-color: red;
@@ -75,8 +75,10 @@ footer{
 }
 input{
     padding:10px;
-    width:20rem;
+    width:40rem;
     border-radius:10px;
+    border : 2px solid orange;
+    font-size:1rem;
 }
 
     </style>
@@ -87,7 +89,7 @@ input{
             <div class="left">
                 <div class="heading"><h1>SHOP HERE</h1></div>
                 <div class="search-bar">
-                    <input type="text" placeholder="search product">
+                    <input type="text" placeholder="🔍︎ search product">
                 </div>
             </div>
             <div class="right">
@@ -107,6 +109,7 @@ input{
     <h1>Products will be displayed here</h1>
     {% endblock %}
 
+    {% block footer %}
     <footer>
         <div class="footer">
             <ul>
@@ -124,5 +127,7 @@ input{
             </ul>
         </div>
     </footer>
+
+    {% endblock %}
 </body>
 </html>
