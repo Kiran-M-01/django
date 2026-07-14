@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- IF CONDITION -->
+     
+    type = {{ type }} <br>
+
+    {% if type == 'positive'  %}
+    {% if num > 0 %}
+    <h2>Positive Number</h2>
+    {% endif %}
+
+    {% elif type == 'vote'  %}
+    {% if age >= 18 %}
+    <h2>Eligible to Vote</h2>
+    {% endif %}
+
+    {% elif type == 'name'  %}
+    {% if name %}
+    <h2>Welcome {{ name }}</h2>
+    {% endif %}
+
+    {% elif type == 'fruits'  %}
+    {% if fruits %}
+    <p>Fruit list is available.</p>
+    {% endif %}
+
+    {% elif type == 'login'  %}
+    {% if logged_in %}
+    <h2>User Logged In</h2>
+    {% endif %}
+
+    <!-- IF ELSE -->
+
+    {% elif type == 'evenodd'  %}
+    {% if num|divisibleby:2 %}
+    <p>Even Number</p>
+    {% else %}
+    <p>Odd Number</p>
+    {% endif %}
+
+    {% elif type == 'adult'  %}
+    {% if age >= 18 %}
+    <p>Adult</p>
+    {% else %}
+    <p>Minor</p>
+    {% endif %}
+
+    {% elif type == 'result'  %}
+    {% if marks >= 35 %}
+    <p>Pass</p>
+    {% else %}
+    <p>Fail</p>
+    {% endif %}
+
+    {% elif type == 'userlogin'  %}
+    {% if logged_in %}
+    <p>Welcome User</p>
+    {% else %}
+    <p>Please Login</p>
+    {% endif %}
+
+    {% else  %}
+    {% if stock > 0 %}
+    <p>Product Available</p>
+    {% else %}
+    <p>Out of Stock</p>
+    {% endif %}
+
+    {% endif %}
+</body>
+</html>

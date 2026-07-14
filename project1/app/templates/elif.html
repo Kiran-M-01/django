@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load static %}
+
+    {% if 'A' <= ch and ch <= 'Z' %}
+    <h1>{{ch}} is Uppercase<h1>
+    {% elif 'a' <= ch and ch <= 'z' %}
+    <h1>{{ch}} is Lowercase</h1>
+    {% elif '0' <= ch and ch <= '9' %}
+    <h1>{{ch}} is a Number</h1>
+    {% else %}
+    <h1>{{ch}} is a Special character</h1>
+
+    {% endif %}
+
+    <!--   ELIF 5 EXAMPLES  -->
+
+    {{type}} :  
+
+{% if type == 'char' %}
+
+    {% if ch == 'a' %}
+        Vowel
+    {% elif ch == 'e' %}
+        Vowel
+    {% elif ch == 'i' %}
+        Vowel
+    {% elif ch == 'o' %}
+        Vowel
+    {% elif ch == 'u' %}
+        Vowel
+    {% else %}
+        Consonant
+    {% endif %}
+
+{% elif type == 'grade' %}
+
+    {% if marks >= 90 %}
+        Grade A
+    {% elif marks >= 75 %}
+        Grade B
+    {% elif marks >= 60 %}
+        Grade C
+    {% elif marks >= 50 %}
+        Grade D
+    {% elif marks >= 35 %}
+        Grade E
+    {% else %}
+        Fail
+    {% endif %}
+
+{% elif type == 'month' %}
+
+    {% if num == 1 %}
+        January
+    {% elif num == 2 %}
+        February
+    {% elif num == 3 %}
+        March
+    {% elif num == 4 %}
+        April
+    {% elif num == 5 %}
+        May
+    {% else %}
+        Other Month
+    {% endif %}
+
+{% elif type == 'weekday' %}
+
+    {% if day == 'mon' %}
+        Monday
+    {% elif day == 'tue' %}
+        Tuesday
+    {% elif day == 'wed' %}
+        Wednesday
+    {% elif day == 'thu' %}
+        Thursday
+    {% elif day == 'fri' %}
+        Friday
+    {% else %}
+        Weekend
+    {% endif %}
+
+
+{% elif type == 'signal' %}
+
+    {% if color == 'red' %}
+        Stop
+    {% elif color == 'yellow' %}
+        Ready
+    {% elif color == 'green' %}
+        Go
+    {% else %}
+        Invalid Color
+    {% endif %}
+
+{% endif %}
+
+
+
+<!-- NESTED IF 5 EXAMPLES -->
+ {% if type == 'citizen' %}
+
+    {% if age >= 18 %}
+        {% if age >= 60 %}
+            Senior Citizen
+        {% else %}
+            Adult
+        {% endif %}
+    {% else %}
+        Minor
+    {% endif %}
+
+{% elif type == 'result' %}
+
+    {% if marks >= 35 %}
+        {% if marks >= 75 %}
+            Distinction
+        {% else %}
+            Pass
+        {% endif %}
+    {% else %}
+        Fail
+    {% endif %}
+
+{% elif type == 'salary' %}
+
+    {% if salary > 0 %}
+        {% if salary >= 50000 %}
+            High Salary
+        {% else %}
+            Low Salary
+        {% endif %}
+    {% else %}
+        Invalid Salary
+    {% endif %}
+    
+
+{% elif type == 'leep_year' %}
+
+    {% if year|divisibleby:4 %}
+        {% if year|divisibleby:100 %}
+            {% if year|divisibleby:400 %}
+                Leap Year
+            {% else %}
+                Not Leap Year
+            {% endif %}
+        {% else %}
+            Leap Year
+        {% endif %}
+    {% else %}
+        Not Leap Year
+    {% endif %}
+
+{% elif type == 'nested6' %}
+
+    {% if temp >= 0 %}
+        {% if temp >= 35 %}
+            Hot
+        {% else %}
+            Normal
+        {% endif %}
+    {% else %}
+        Freezing
+    {% endif %}
+
+{% endif %}
+
+
+</body>
+</html>

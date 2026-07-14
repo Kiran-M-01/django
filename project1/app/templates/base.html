@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%}My website{% endblock%}</title>
+    <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+nav{
+    height: 70px;
+    padding: 0px 100px;
+    border-bottom: 2px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#131921;
+    color:white;
+
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+}
+.right ul{
+    display: flex;
+    justify-content: space-around;
+    column-gap:20px ;
+}
+.right ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    background-color: black;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: red;
+} 
+
+/* STYLING THE MAIN SECTION */
+
+
+
+/* STYLING THE FOOTER SECTION */
+.footer ul{
+    width:100vw;
+    height:10vh;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    align-items:center;
+    list-style:none;
+
+    background-color:#232F3E;
+    color:white;
+
+
+}
+footer{
+    margin-bottom:0px;
+}
+.search-bar{
+    padding:30px;
+    
+}
+input{
+    padding:10px;
+    width:20rem;
+    border-radius:10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <div class="heading"><h1>SHOP HERE</h1></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="search product">
+                </div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>MEN</li>
+                    <li>WOMEN</li>
+                    <li>KIDS</li>
+                    <li>Wishlist</li>
+                    <li>🛒 Cart</li>
+                    <li><button>Sign In</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    {% block content %} 
+    
+    {% endblock %}
+
+    <footer>
+        <div class="footer">
+            <ul>
+                <li>Help</li>
+                <li>Status</li>
+                <li>About</li>
+                <li>Careers</li>
+                <li>Press</li>
+                <li>Blog</li>
+                <li>Store</li>
+                <li>Privacy</li>
+                <li>Rules</li>
+                <li>Terms</li>
+                <li>Text to speech</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

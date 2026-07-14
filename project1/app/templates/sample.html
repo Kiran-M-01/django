@@ -1,0 +1,55 @@
+{% load static %}
+
+{% load custom_filters %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample</title>
+
+<!-- {% load static %} -->
+
+<link rel="stylesheet" href="{% static 'css/sample.css' %}">
+</head>
+<body>
+
+<h1>
+    name : {{ name }}
+     <br>
+    age : {{ age|default:"Not Provided" }} 
+    <br>
+    gender : {{ gender }}
+    <br>
+    sentence : {{sent}}
+    <br>
+    <br>
+    <!-- TEMPLATE FILTERS -->
+    {{name|length}}  <br>
+    {{name|upper}} <br>
+    {{name|lower}} <br>
+    {{name|capfirst}}  <br>
+    {{gender|slice:':3'}}   <br>
+    {{sent|truncatechars:7}}  <br>
+    {{sent|truncatewords:7}}    <br>
+    {{age|divisible:5}}
+
+    <!-- CREATING CUSTOM FILTERS -->
+     Vowels : {{name|vowels}}   <br>
+
+     Frequency of each character : {{name|freq}}   <br>
+
+     {{age}} % 4 {{age|divisible:4}}    <br>
+
+     is Prime : {{age|prime:40}}     <br>
+
+     multiply : {{age|multiply:3}}    <br>
+
+     add : {{age|add_num:4}}   <br>
+
+    same : {{age|guess_num:20}}   <br>
+    
+
+
+</h1>
+
+</body>
+</html>
