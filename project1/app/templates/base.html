@@ -84,50 +84,16 @@ input{
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="left">
-                <div class="heading"><h1>SHOP HERE</h1></div>
-                <div class="search-bar">
-                    <input type="text" placeholder="🔍︎ search product">
-                </div>
-            </div>
-            <div class="right">
-                <ul>
-                    <li>MEN</li>
-                    <li>WOMEN</li>
-                    <li>KIDS</li>
-                    <li>Wishlist</li>
-                    <li>🛒 Cart</li>
-                    <li><button>Sign In</button></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    {% include 'partials/header.html' %}
+    <br>
     
     {% block content %} 
     <h1>Products will be displayed here</h1>
     {% endblock %}
 
-    {% block footer %}
-    <footer>
-        <div class="footer">
-            <ul>
-                <li>Help</li>
-                <li>Status</li>
-                <li>About</li>
-                <li>Careers</li>
-                <li>Press</li>
-                <li>Blog</li>
-                <li>Store</li>
-                <li>Privacy</li>
-                <li>Rules</li>
-                <li>Terms</li>
-                <li>Text to speech</li>
-            </ul>
-        </div>
-    </footer>
+    <!-- {% block footer %} -->
+    {% include 'partials/footer.html' %}
 
-    {% endblock %}
+    <!-- {% endblock %} -->
 </body>
 </html>
