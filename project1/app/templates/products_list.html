@@ -52,11 +52,12 @@ One Product
         {% for product in products %}
         <span>
                 <a href="{% url 'product_detail' product.id %}">
-                <img src="{{ product.thumbnail }}" width="200">
+                <img src="{{ product.image }}" width="200">
                 </a> <br>
-                <h2>{{product.brand}} </h2><br>
-                <h2>${{product.price}}</h2>   <br>
-                <h2>Discount:{{product.discountPercentage}}%</h2>  <br>
+                <h2>{{product.name}} </h2><br>
+                <h2>Price : Rs.{{product.price}}</h2>   <br>
+                <h2>Discount:{{product.discount}}%</h2>  <br>
+                <h2>Restaurant:{{product.restaurant}}</h2>   <br>
                 <h2>⭐{{product.rating}}</h2>   <br>
                 <button>Add To Cart</button>
         </span>

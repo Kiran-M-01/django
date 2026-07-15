@@ -208,7 +208,7 @@ import json
 
 py_data = json.loads(json_data)
 
-products_api = py_data['products']
+products_api = py_data['recipes']
 
 def products(request):
     context = {
